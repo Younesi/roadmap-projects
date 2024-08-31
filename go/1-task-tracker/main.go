@@ -21,7 +21,7 @@ func main() {
 	}
 
 	result := handleCommands(tm, command, param, param2)
-	if err := tm.saveTasks(); err != nil {
+	if err := tm.SaveTasks(); err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println(result)

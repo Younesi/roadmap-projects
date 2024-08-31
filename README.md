@@ -1,6 +1,6 @@
 # [Roadmap.sh Projects](https://roadmap.sh/projects) Repository
 
-This collection contains practical solutions and implementations for various projects covering a wide range of technologies and domains, inspired by roadmap.sh. Whether you're a beginner looking to learn or an experienced developer seeking reference implementations, you'll find valuable resources here to enhance your skills in different areas of software development and operations.
+This collection repostiory contains practical solutions and implementations for various projects covering a wide range of technologies and domains, inspired by roadmap.sh. Whether you're a beginner looking to learn or an experienced developer seeking reference implementations, you'll find valuable resources here to enhance your skills in different areas of software development and operations.
 
 ## Structure
 

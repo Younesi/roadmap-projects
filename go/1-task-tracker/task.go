@@ -63,16 +63,22 @@ func NewTaskManager() *TaskManager {
 
 // LoadTasks loads tasks from a JSON file
 func (tm *TaskManager) LoadTasks(filename string) error {
-	file, err := os.OpenFile(filename, os.O_RDONLY, 0664)
+	file, err := os.OpenFile(filename, os.O_RDONLY|os.O_CREATE, 0664)
 	if err != nil {
 		return fmt.Errorf("error when opening file: %v", err)
 	}
 	defer file.Close()
 
 	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&tm.Tasks); err != nil {
-		return fmt.Errorf("error during reading data: %v", err)
+	// Check if the JSON is empty
+	if decoder.More() {
+		if err := decoder.Decode(&tm.Tasks); err != nil {
+			return fmt.Errorf("error during reading data: %v", err)
+		}
+	} else {
+		tm.Tasks = []Task{}
 	}
+
 	tm.fileName = filename
 	return nil
 }
@@ -120,7 +126,7 @@ func (tm *TaskManager) deleteTask(id int) error {
 	return fmt.Errorf("could not delete task with id %d", id)
 }
 
-func (tm *TaskManager) saveTasks() error {
+func (tm *TaskManager) SaveTasks() error {
 	file, err := os.OpenFile(tm.fileName, os.O_WRONLY|os.O_TRUNC, 0664)
 	if err != nil {
 		return fmt.Errorf("error when opening file: %v", err)

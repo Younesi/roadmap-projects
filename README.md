@@ -17,3 +17,6 @@ Each technology/skill/language category has its own directory containing individ
 
 - [Task Tracker](https://github.com/Younesi/roadmap-projects/tree/main/go/1-task-tracker)
   - Original: https://roadmap.sh/projects/task-tracker
+
+- [GitHub User Activity](https://github.com/Younesi/roadmap-projects/tree/main/go/2-github-user-activity)
+  - Original: https://roadmap.sh/projects/github-user-activity

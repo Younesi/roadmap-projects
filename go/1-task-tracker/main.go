@@ -11,7 +11,7 @@ import (
 func main() {
 	command, param, param2, err := getCommandsAndParams(os.Args)
 	if err != nil {
-		fmt.Printf("Error : %s", err)
+		fmt.Printf("%s", err)
 		return
 	}
 
@@ -33,6 +33,9 @@ func handleCommands(tm *TaskManager, command, param, param2 string) string {
 		tasks := tasksToString(tm.Tasks, param)
 		return tasks
 	case "add":
+		if len(param) < 1 {
+			return fmt.Sprintf("Task title is required")
+		}
 		newTask := tm.addTask(param)
 		return fmt.Sprintf("Task has been added successfully. (ID: %d)", newTask.Id)
 	case "update":
@@ -62,7 +65,7 @@ func handleCommands(tm *TaskManager, command, param, param2 string) string {
 			return fmt.Sprintf("Could not update state of the task, [error: %s]", err)
 		}
 	default:
-		return fmt.Sprintf("Command %s is not supported", command)
+		return fmt.Sprintf("Command %s is not supported \n", command)
 	}
 
 	return fmt.Sprintf("")
@@ -70,7 +73,7 @@ func handleCommands(tm *TaskManager, command, param, param2 string) string {
 
 func getCommandsAndParams(input []string) (c, p, p2 string, err error) {
 	if len(input) < 2 {
-		return "", "", "", fmt.Errorf("command is required")
+		return "", "", "", fmt.Errorf("command is required \n")
 	}
 
 	// Skip the program name (at index 0)

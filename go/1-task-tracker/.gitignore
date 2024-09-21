@@ -3,3 +3,4 @@
 /vendor/**
 ./task-tracker
 task-tracker
+tasks.json

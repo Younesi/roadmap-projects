@@ -20,3 +20,6 @@ Each technology/skill/language category has its own directory containing individ
 
 - [GitHub User Activity](https://github.com/Younesi/roadmap-projects/tree/main/go/2-github-user-activity)
   - Original: https://roadmap.sh/projects/github-user-activity
+
+- [Number Guessing Game](https://github.com/Younesi/roadmap-projects/tree/main/go/3-number-guessing-game)
+  - Original: https://roadmap.sh/projects/number-guessing-game

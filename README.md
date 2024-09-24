@@ -23,3 +23,6 @@ Each technology/skill/language category has its own directory containing individ
 
 - [Number Guessing Game](https://github.com/Younesi/roadmap-projects/tree/main/go/3-number-guessing-game)
   - Original: https://roadmap.sh/projects/number-guessing-game
+
+- [Number Guessing Game](https://github.com/Younesi/roadmap-projects/tree/main/go/4-caching-server)
+  - Original: https://roadmap.sh/projects/caching-server

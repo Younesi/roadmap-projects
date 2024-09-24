@@ -1,4 +1,4 @@
-# Number Guessing Game
+# Caching Proxy
 
 A solution for the [Caching Proxy](https://roadmap.sh/projects/caching-server) challenge from [roadmap.sh](https://roadmap.sh/).
 
